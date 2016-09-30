@@ -1,0 +1,85 @@
+【Aya Game Engine 2D 使用说明】
+
+版本：0.9.2.1
+
+要求环境: 	Windows XP 及更高版本的操作系统
+	  	Intel Core 2 及性能更高的处理器
+	  	Intel GMA 950 及性能更高的显卡
+	  	.Net Framework 2.0 及更高版本.Net框架
+	  	Open GL 1.4 及更高版本OpenGL支持
+
+依赖库:		CSGL 1.4.1		OpenGL的.Net封装,提供高效图形渲染支持
+		Bass 24.10.3		Bass.Net,提供多格式音频支持
+		LuaInterface 2.0.3	Lua脚本支持库
+
+
+
+【引擎特点】
+
+1.与GDI保持一致风格且易用的绘图接口。
+2.与Unity风格相似的常用静态接口。
+3.依赖时间的游戏速度控制和主循环实现。
+4.常用引擎功能方法可以通过短名称静态类全局快速调用，大部分功能仅需引用AyaGameEngine2D命名空间。
+5.（未完成）游戏->场景->游戏对象->对象组件 管理模式。
+6.丰富且实用的扩展功能类库。
+
+
+【使用说明】
+
+1.在.Net 2.0以上项目中添加AyaGameEngine2D.dll的引用。
+2.设置项目输出目标平台x86。
+3.将其余dll文件复制到Debug文件夹下。
+4.在需要使用引擎的代码中，添加using AyaGameEngine2D;
+5.主窗口继承AyaGameEngine2D.GameForm;
+6.重写AyaGameEngine2D.GameForm的GameDraw(),GameLogic(),GameIO()方法，以使用引擎。
+7.调用Engine/Display等接口中的方法，对引擎参数进行预设。
+8.调用Engine.EngineInit()初始化引擎。
+9.初始化游戏资源。
+10.调用Engine.EngineStart()启动引擎，运行游戏。
+
+
+
+【文件说明】
+
+·AyaGameEngine2D.dll
+	引擎主DLL，游戏项目通过引用该DLL调用引擎功能(不需要调用其他DLL)。
+·bass.dll
+	Bass音频库，由Bass.Net.DLL调用。
+·Bass.Net.dll
+	Bass音频库的.Net封装，由引擎调用。
+·csgl.dll
+	OpenGL的C#封装，由引擎调用。
+·csgl.native.dll
+	CSGL依赖的OpenGL主入口，由csgl.DLL调用。
+·lua51.dll
+	Lua脚本运行时库。
+·LuaInterface.dll
+	Lua的.net调用支持库。
+
+
+
+
+【性能参考】
+
+理想性能：60fps 1280x720 每秒50W次以下纹理或者10W次以下图形或者1000次以下文本
+每帧1W次以下的纹理绘制
+
+
+【性能测试】
+
+处理器：E3-1231v3 3.4GHz
+显卡：	GTX 960 4GB GDDR5
+分辨率：1280x720
+[结果1]
+绘制：	50W次纹理
+帧数：	60fps
+[结果2]
+绘制：	25W次纹理 25W次图形
+帧数：	25fps
+
+
+
+【模块命名】
+
+1.除主循环和游戏画面容器外，引擎子系统以Manager结尾，全部为单例静态实现。
+2.所有辅助功能类以Helepr结尾，按使用频率决定是否静态实现。
