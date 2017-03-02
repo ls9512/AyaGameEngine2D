@@ -1,11 +1,4 @@
-# Ignore AGE2D Example Files
-AcgParkour/
-DataAcg/
-JewelHunter/
-DataJewel/
-
 # Ignore AGE2D Temp Files
-API Doc/
 Bak/
 Res/
 
