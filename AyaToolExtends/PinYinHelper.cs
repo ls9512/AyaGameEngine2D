@@ -130,7 +130,7 @@ namespace AyaGameEngine2D
         /// </summary>
         /// <param name="Chstr">汉字字符串</param>
         /// <returns>转换后的拼音字符串</returns>
-        public string ConvertToPinYin(string str)
+        public string ConvertToPinyin(string str)
         {
             Regex reg = new Regex("^[\u4e00-\u9fa5]$");//验证是否输入汉字
             byte[] arr = new byte[2];

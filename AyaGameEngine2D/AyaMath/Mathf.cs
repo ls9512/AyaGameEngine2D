@@ -28,7 +28,31 @@
         /// </summary>
         public static float PI = 3.1415926f;
 
+		/// <summary>
+		/// 限定范围(整形)
+		/// </summary>
+		/// <param name="value">值</param>
+		/// <param name="min">最小</param>
+		/// <param name="max">最大</param>
+		/// <returns>结果</returns>
+		public static int Clamp(int value, int min, int max) {
+			value = value < min ? min : value;
+			value = value > max ? max : value;
+			return value;
+		}
 
-    }
+		/// <summary>
+		/// 限定范围(浮点)
+		/// </summary>
+		/// <param name="value">值</param>
+		/// <param name="min">最小</param>
+		/// <param name="max">最大</param>
+		/// <returns>结果</returns>
+		public static float Clamp(float value, float min, float max) {
+			value = value < min ? min : value;
+			value = value > max ? max : value;
+			return value;
+		}
+	}
 
 }
