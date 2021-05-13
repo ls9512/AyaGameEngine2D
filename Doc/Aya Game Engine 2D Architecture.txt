@@ -1,0 +1,144 @@
+【Aya Game Engine 2D 功能结构】
+
+
+【快速调用接口】
+
+·Debug
+·Display
+·Engine
+·Input
+·Sound
+·Time
+
+
+【模块说明】
+
+·控件
+==============================================================
+·AyaControls
+	·GameForm		游戏窗体
+	·(废弃)GamePanel	游戏面板
+	·OpenGLPanel		OpenGL游戏画面容器
+
+·核心
+==============================================================
+·AyaCore
+	·EngineLogo		引擎LOGO
+	·EngineLoop		引擎主循环体
+	·GameLoop		游戏主循环
+	·GameTimer		游戏计时器
+	·PreciseTimer		高性能计数器
+
+·数据
+==============================================================
+·AyaData
+	·CsvHelper		CSV文件操作类
+	·FileSystem		文件系统类
+	·IniHelper		Ini配置文件操作类
+	·JsonHelper		Json数据操作类
+	·RandomHelper		随机数类
+	·Security		数据加密和解密类
+	·StringHelper		字符串操作类
+	·XmlHelper		Xml文件操作类
+
+·扩展
+==============================================================
+·AyaExtends
+	·LuaScript		Lua脚本操作类
+	·MidiSound		Midi音频类
+	·RegistryHelper	注册表操作类
+	·WmTimer		多媒体定时触发器
+
+·游戏
+==============================================================
+·AyaGame	
+	·GameSupport		游戏辅助算法类	
+	·LayerMnaager		层管理器
+	·SceneManager		场景管理器
+
+·图像
+==============================================================
+·AyaGraphics
+	·BitmapHelper		GDI位图处理类
+	·ColorHelper		颜色辅助(RGB,HSV,HSL颜色模型)
+	·GraphicHelper		图像处理类
+	·FontHelper		字体类
+
+·接口
+==============================================================
+·AyaInterface
+	·Debug			调试静态调用接口
+	·Display		显示静态调用接口
+	·Engine		引擎静态调用接口
+	·Input			输入静态查询接口
+	·Sound			音频静态调用接口
+	·Time			时间静态查询接口
+
+·输入\输出
+==============================================================
+·AyaIO
+	·KeyManager		键盘事件管理
+	·MouseManager		鼠标事件管理
+	·SoundManager		音频管理
+
+·数学
+==============================================================
+·AyaMathf
+	·Formula		表达式计算类
+	·Mathf			浮点数学类
+	·Vector2		二维向量
+	·Vector3		三维向量
+	·Vector4		四维向量
+
+·模型
+==============================================================
+·AyaModels
+	·Color
+		·(废弃)ColorHsl		HSL颜色模型
+		·ColorHSV		HSV颜色模型
+		·ColorRGB		RGB颜色模型
+	·Components
+		·Component	 	基础组件
+		·GameObject		游戏对象
+		·Movement		移动组件
+		·Renderer		渲染组件
+		·Script		脚本组件
+		·Transform		变换组件
+	·Animation		动画(基于TextureMatrix)
+	·BaseObject		基元对象类
+	·EngineInfo		引擎级消息类
+	·LayerMask		层
+	·Scene			游戏场景
+	·Texture		纹理
+	·TextureChar		角色纹理(4x4行走图)
+	·TextureMatrix		矩阵纹理
+
+·网络
+==============================================================
+·AyaNet
+	·ClientEventHandler	消息队列处理类
+
+·工具箱
+==============================================================
+·AyaTool
+	·DebugDraw		调试绘图
+	·InfoPublisher		引擎主循环级消息发布器
+	·LogHelper		日志管理类
+	·PerformanceAnalyzer	性能分析器
+	·PoolManager		简单对象池管理器
+	·Timer			计时器类
+	·Win32			Windows API
+
+·用户界面
+==============================================================
+·AyaUI
+	·BaseUI		UI控件的基类
+	·UIButton		UI按钮类
+
+·扩展工具(可选)
+==============================================================
+·AyaExtends
+
+·全局参数
+==============================================================
+·General			引擎全局参数
